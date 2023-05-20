@@ -28,11 +28,28 @@ Para o desafio de criar uma solução para o agronegócio, foi proposta uma solu
 
 ## Como rodar o projeto
 1. Realizar o git Clone do projeto
+<img alt="Clonando projeto" src="assets/gitclone.JPG" />
+<img alt="Clonando projeto" src="assets/gitclone2.JPG" />
+
+
 2. Baixar as depêndencias do Maven
+<img alt="Clonando projeto" src="assets/maven-scripts.JPG" />
+
+
 3. Rodar o comando "docker compose up -d" no arquivo docker compose para subir a imagem do RabbitMQ
+<img alt="Clonando projeto" src="assets/docker.JPG" />
+
 4. Rodar o projeto Agrofiap-producer
+
 5. Realizar o login do Rabbit MQ no endereço http://localhost:15672/#/
+<img alt="Clonando projeto" src="assets/rabbitmqlogin.png" />
+<img alt="Clonando projeto" src="assets/rabbitmq.png" />
+
 6. Configurar o e-mail de envio no properties do projeto Agrofiap-consumer
-7. Rodar o projeto Agrofiap-consumer
-8. Utilizar os endpoints http://localhost:8080/leitura e http://localhost:8080/drone para envio de informações
+<img alt="Clonando projeto" src="assets/configmail.png" />
+<img alt="Clonando projeto" src="assets/configmail2.png" />
+
+
+10. Rodar o projeto Agrofiap-consumer
+11. Utilizar os endpoints http://localhost:8080/leitura e http://localhost:8080/drone para envio de informações
 
