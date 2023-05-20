@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="agrofiap-consumer" />
+        <module name="agrofiap-producer" />
+        <module name="agrolib-fiap" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="agrofiap-consumer" target="17" />
+      <module name="agrofiap-producer" target="17" />
+      <module name="agrolib-fiap" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="agrofiap-consumer" options="-parameters" />
+      <module name="agrofiap-producer" options="-parameters" />
+    </option>
+  </component>
+</project>
