@@ -10,14 +10,9 @@ A cada 10 segundos são enviados para message broker os dados de temperatura e u
 a.	Temperatura (>= 35 ou <=0) ou (Umidade <= 15%).
 b.	Envie no corpo do e-mail o id_drone e os valores capturados.
 
-Requisitos: 
-•	Código publicado no GitHub.
-•	Readme.md (use os estilos para formatação) com detalhes do projeto, de como subir, configurar, printscreen com o funcionamento da aplicação, ou um vídeo.
-•	Pense na implementação que possa suportar vários drones, desta forma considere isso para o funcionamento dos alarmes e do rastreamento.
-•	Use RabbitMQ ou Apache Kafka.
-
 ## Solução
 Para o desafio de criar uma solução para o agronegócio, foi proposta uma solução baseada em mensageria, utilizando o Java, Spring e o Rabbit MQ, conforme apresentado no quadro abaixo: 
+<img alt="Fluxo aplicação" src="assets/fluxo.png" />
 
 - DRONE: Dispositivo capaz de realizar leituras do ambiente o qual esta inserido e envia-las para a aplicação AGROFIAP-PRODUCER.
 - AGROLIB-FIAP: Biblioteca em java contendo classes utilizadas pelas aplicações AGROFIAP-PRODUCER e AGROFIAP-CONSUMER.
@@ -25,10 +20,19 @@ Para o desafio de criar uma solução para o agronegócio, foi proposta uma solu
 - RABBIT MQ: Servidor de mensageria.
 - AGROFIAP-CONSUMER: Aplicação responsável por processar as leituras dos drones e envio de emails alertas conforme necessário
 
-
-
+## Tecnologias utilizas
+- Java
+- Spring
+- Docker
+- RabbitMQ
 
 ## Como rodar o projeto
-
-## Tecnologias utilizas
+1. Realizar o git Clone do projeto
+2. Baixar as depêndencias do Maven
+3. Rodar o comando "docker compose up -d" no arquivo docker compose para subir a imagem do RabbitMQ
+4. Rodar o projeto Agrofiap-producer
+5. Realizar o login do Rabbit MQ no endereço http://localhost:15672/#/
+6. Configurar o e-mail de envio no properties do projeto Agrofiap-consumer
+7. Rodar o projeto Agrofiap-consumer
+8. Utilizar os endpoints http://localhost:8080/leitura e http://localhost:8080/drone para envio de informações
 
