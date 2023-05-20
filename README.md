@@ -16,6 +16,18 @@ Requisitos:
 •	Pense na implementação que possa suportar vários drones, desta forma considere isso para o funcionamento dos alarmes e do rastreamento.
 •	Use RabbitMQ ou Apache Kafka.
 
+## Solução
+
+Para o desafio de criar uma solução para o agronegócio, foi proposta uma solução baseada em mensageria, utilizando o Java, Spring e o Rabbit MQ, conforme apresentado no quadro abaixo: 
+
+•	DRONE: Dispositivo capaz de realizar leituras do ambiente o qual esta inserido e envia-las para a aplicação AGROFIAP-PRODUCER.
+•	AGROLIB-FIAP: Biblioteca em java contendo classes utilizadas pelas aplicações AGROFIAP-PRODUCER e AGROFIAP-CONSUMER.
+•	AGROFIAP-PRODUCER: Interface disponibilizada ao drone para envio dos dados referentes às leituras que são encaminhadas para a fila do RABBIT MQ.
+•	RABBIT MQ: Servidor de mensageria.
+•	AGROFIAP-CONSUMER: Aplicação responsável por processar as leituras dos drones e envio de emails alertas conforme necessário
+![image](https://github.com/MathSena/agro-fiap/assets/33051907/6db52889-538b-4cf8-b07a-21b1709165b2)
+
+
 
 ## Como rodar o projeto
 
